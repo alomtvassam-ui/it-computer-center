@@ -37,35 +37,24 @@
 
 <section id="courses">
   <h2>Our Courses</h2>
-  <div class="cards">
-    <div class="card"><h3>Basic Computer</h3><p>MS Word, Excel, PowerPoint, Internet</p></div>
-    <div class="card"><h3>DCA / ADCA</h3><p>Diploma in Computer Applications</p></div>
-    <div class="card"><h3>Web Design</h3><p>HTML, CSS, Basics of Website Design</p></div>
-    <div class="card"><h3>Tally & GST</h3><p>Accounting with practical training</p></div>
-  </div>
-</section>
+**Add Netlify Functions with JWT auth protection for courses and users**
 
-<section id="services">
-  <h2>Our Services</h2>
-  <div class="cards">
-    <div class="card">Online Form Fill-up</div>
-    <div class="card">Printing & Scanning</div>
-    <div class="card">Typing (Assamese / English)</div>
-    <div class="card">Internet & Digital Services</div>
-  </div>
-</section>
+* Implement serverless functions for `courses` and `users`
+* Add GET and POST endpoints for courses
+* Introduce JWT-based authentication middleware
+* Enforce admin-only access for course creation (POST /courses)
+* Add reusable `requireAdmin` authorization helper
+* Integrate frontend with protected API endpoints
+* Handle validation, error states, and loading UI
+* Include test cases for auth and API behavior
 
-<section id="contact">
-  <h2>Contact Us</h2>
-  <p><strong>Address:</strong> Your Location, Assam</p>
-  <p><strong>Phone:</strong> +91 XXXXXXXXXX</p>
-  <p><strong>Email:</strong> itcomputercenter@gmail.com</p>
-  <button>Call Now</button>
-</section>
+**Notes:**
 
-<footer>
-  <p>© 2026 IT Computer Center. All Rights Reserved.</p>
-</footer>
+* Uses static secret (to be moved to environment variables)
+* Data currently in-memory (no database persistence yet)
 
-</body>
-</html>
+**Next Steps:**
+
+* Integrate Supabase database
+* Replace mock auth with real authentication system
+* Add enrollments and payment flow
